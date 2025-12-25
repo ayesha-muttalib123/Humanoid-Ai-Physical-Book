@@ -1,12 +1,66 @@
-<!-- 
-Sync Impact Report:
-- Version change: N/A → 1.0.0
-- Modified principles: N/A (new constitution)
-- Added sections: All sections are new for this project
-- Removed sections: N/A
-- Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
-- Follow-up TODOs: None
--->
+---
+id: 1
+title: Create Physical AI Humanoid Constitution
+stage: constitution
+date: 2025-01-14
+surface: agent
+model: Qwen
+feature: none
+branch: main
+user: user
+command: /sp.constitution
+labels: [constitution,physical-ai,robotics,education]
+links:
+  spec: null
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - .specify/memory/constitution.md
+tests:
+ - none
+---
+
+## Prompt
+
+Create or update the project constitution from interactive or provided principle inputs, ensuring all dependent templates stay in sync.
+
+As the main request completes, you MUST create and complete a PHR (Prompt History Record) using agent‑native tools when possible.
+
+1) Determine Stage
+   - Stage: constitution | spec | plan | tasks | red | green | refactor | explainer | misc | general
+
+2) Generate Title and Determine Routing:
+   - Generate Title: 3–7 words (slug for filename)
+   - Route is automatically determined by stage:
+     - `constitution` → `history/prompts/constitution/`
+     - Feature stages → `history/prompts/<feature-name>/` (spec, plan, tasks, red, green, refactor, explainer, misc)
+     - `general` → `history/prompts/general/`
+
+3) Create and Fill PHR (Shell first; fallback agent‑native)
+   - Run: `.specify/scripts/bash/create-phr.sh --title "<title>" --stage <stage> [--feature <name>] --json`
+   - Open the file and fill remaining placeholders (YAML + body), embedding full PROMPT_TEXT (verbatim) and concise RESPONSE_TEXT.
+   - If the script fails:
+     - Read `.specify/templates/phr-template.prompt.md` (or `templates/…`)
+     - Allocate an ID; compute the output path based on stage from step 2; write the file
+     - Fill placeholders and embed full PROMPT_TEXT and concise RESPONSE_TEXT
+
+4) Validate + report
+   - No unresolved placeholders; path under `history/prompts/` and matches stage; stage/title/date coherent; print ID + path + stage + title.
+   - On failure: warn, don't block. Skip only for `/sp.phr`.
+
+/sp.constitution
+Project constitution for "Physical AI & Humanoid Robotics":
+- Strictly cover all original requirements: Theme (Embodied Intelligence), Goal, Modules 1-4, Capstone, Why Physical AI Matters, Learning Outcomes, Assessments.
+- Weekly Breakdown: Exactly 13 weeks, each with precisely 4 chapters (sub-divided balanced topics with practical examples, code snippets, diagrams via Mermaid/MDX).
+- Use Docusaurus classic template: docs as root, nested hierarchical sidebar (Weeks as categories → 4 chapters each).
+- Rich MDX content: Code blocks, tables (hardware comparisons), Mermaid diagrams for ROS 2 architecture, URDF, etc.
+- Update hardware prices: Jetson Orin Nano Super $249, Unitree Go2 from $1,600, Unitree G1 $13,500–$16,000, RealSense D435i available ~$200–$500.
+- Educational, step-by-step tone with warnings on costs/complexity.
+- Automatic deployment to GitHub Pages via Actions.
+
+## Response snapshot
+
 # Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
@@ -166,3 +220,18 @@ Physical AI represents the next frontier in artificial intelligence, bridging th
 This constitution supersedes all other practices for the Physical AI & Humanoid Robotics project. Amendments require documentation of changes, approval by the core development team, and a migration plan for existing components. All PRs and reviews must verify compliance with these principles. Complexity must be justified with clear educational or functional benefits. Use this constitution for guidance in all development decisions.
 
 **Version**: 1.0.0 | **Ratified**: 2025-01-14 | **Last Amended**: 2025-01-14
+
+## Outcome
+
+- ✅ Impact: Created comprehensive constitution for Physical AI & Humanoid Robotics project
+- 🧪 Tests: none
+- 📁 Files: .specify/memory/constitution.md
+- 🔁 Next prompts: Build specification based on updated constitution
+- 🧠 Reflection: The constitution successfully captures all requirements including the 13-week structure with 4 chapters each, hardware specifications with updated prices, educational focus, and development workflow guidelines.
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): not applicable
+- Prompt variant (if applicable): not applicable
+- Next experiment (smallest change to try): Implement the feature specification based on this constitution

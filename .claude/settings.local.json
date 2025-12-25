@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(done)",
+      "Bash(mkdir -p docs/weeks/week-11 docs/weeks/week-12 docs/weeks/week-13)",
+      "Bash(# Remove the conclusion file from week 4 that''s not in the sidebar rm \"\"docs/weeks/week-4/4-5-week-4-conclusion.md\"\" || echo \"\"4-5-week-4-conclusion.md not found in week-4\"\" # Check other weeks for similar conclusion files that might not be in sidebars for i in {5..10}; do ls docs/weeks/week-$i/)",
+      "Bash(xargs -I {} rm \"docs/weeks/week-$i/{}\")",
+      "Bash(echo \"No conclusion file found in week-$i\" done)",
+      "Bash(for i in {5..13})",
+      "Bash(npm install)",
+      "Bash(yarn install)",
+      "Bash(npx docusaurus build)",
+      "Bash(find docs -name \"*.md\" -exec grep -l \"sidebar_label:\" {} ;)",
+      "Bash(npm run build)"
+    ]
+  }
+}
