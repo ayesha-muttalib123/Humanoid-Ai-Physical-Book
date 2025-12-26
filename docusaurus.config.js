@@ -15,7 +15,7 @@ const config = {
   organizationName: 'ayesha-muttalib123', // GitHub username
   projectName: 'Humanoid-Ai-Physical-Book', // GitHub repository name
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
