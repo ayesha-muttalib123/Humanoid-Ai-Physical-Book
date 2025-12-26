@@ -1,168 +1,55 @@
-<!-- 
-Sync Impact Report:
-- Version change: N/A → 1.0.0
-- Modified principles: N/A (new constitution)
-- Added sections: All sections are new for this project
-- Removed sections: N/A
-- Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
-- Follow-up TODOs: None
--->
-# Physical AI & Humanoid Robotics Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. Embodied Intelligence First
-All AI implementations must be designed with physical embodiment in mind from the outset. Algorithms and models must account for real-world physics, sensorimotor integration, and environmental interaction. This approach ensures AI systems are robust, grounded, and capable of operating in dynamic physical environments rather than just simulations.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### II. Hardware-Software Co-Design
-Hardware and software development must proceed in parallel with tight integration. Every software module must consider hardware constraints and capabilities during design. This ensures optimal performance, efficient resource utilization, and practical implementation feasibility for real-world robotics applications.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### III. Safety-First Architecture
-Safety protocols must be built into every layer of the system architecture. From low-level motor control to high-level decision making, safety checks and fail-safes are non-negotiable. This includes emergency stop mechanisms, collision avoidance, and safe operational boundaries that protect both humans and equipment.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### IV. Modular System Design
-All components must follow modular design principles with well-defined interfaces. This allows for component replacement, upgrades, and testing in isolation. Modularity enables iterative development, reduces complexity, and supports the integration of diverse hardware platforms and software frameworks.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### V. Open-Source and Reproducible Research
-All code, documentation, and methodologies must be developed with open-source principles in mind. This ensures reproducibility, enables community contribution, and accelerates advancement in the field. Documentation must be comprehensive and accessible to diverse audiences.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-### VI. Educational Excellence
-Every component of the system must serve educational purposes with clear documentation, examples, and learning pathways. The project must be designed to teach fundamental concepts of physical AI, robotics, and embodied intelligence through hands-on experience and practical application.
+### [PRINCIPLE_6_NAME]
 
-## Course Structure and Content
 
-### Theme: Embodied Intelligence
-The course focuses on the integration of artificial intelligence with physical systems, emphasizing the importance of sensorimotor experience in creating truly intelligent agents. Students will learn how physical embodiment shapes intelligence and why this approach is crucial for developing general AI systems.
+[PRINCIPLE__DESCRIPTION]
 
-### Goal
-To develop a comprehensive understanding of physical AI and humanoid robotics through a structured 13-week curriculum that combines theoretical foundations with practical implementation. Students will build, program, and operate robotic systems that demonstrate key principles of embodied intelligence.
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-### Modules
-1. Foundations of Physical AI: Theoretical concepts, sensorimotor integration, and embodied cognition
-2. Hardware Systems: Robot platforms, sensors, actuators, and real-time control systems
-3. Software Frameworks: ROS 2, perception, planning, and control algorithms
-4. Integration and Deployment: System integration, testing, and real-world applications
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-### Capstone Project
-Students will develop and demonstrate a complete physical AI system that incorporates all learned concepts. Projects will involve building and programming a robot to perform complex tasks requiring perception, decision-making, and physical interaction with the environment.
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-### Why Physical AI Matters
-Physical AI represents the next frontier in artificial intelligence, bridging the gap between simulation and reality. Understanding how intelligence emerges through interaction with the physical world is crucial for developing safe, robust, and generalizable AI systems.
-
-### Learning Outcomes
-- Understand the principles of embodied intelligence and sensorimotor integration
-- Design and implement robotic systems with appropriate hardware and software components
-- Apply AI algorithms to real-world physical systems with appropriate safety considerations
-- Integrate multiple subsystems into a functional physical AI system
-- Evaluate and improve system performance through systematic testing and analysis
-
-### Assessments
-- Weekly practical assignments integrating hardware and software components
-- Mid-term project demonstrating a functional subsystem
-- Final capstone project with comprehensive system demonstration
-- Peer review and documentation of all developed components
-
-## Weekly Breakdown
-
-### Week 1: Introduction to Physical AI
-1. Foundations of Embodied Intelligence
-2. History and Evolution of Robotics
-3. Hardware Platforms Overview
-4. ROS 2 Introduction and Setup
-
-### Week 2: Robot Hardware Fundamentals
-1. Actuators and Motor Control
-2. Sensor Technologies (LIDAR, Cameras, IMU)
-3. Computing Platforms (Jetson Orin Nano Super $249)
-4. Power Systems and Management
-
-### Week 3: Perception Systems
-1. Computer Vision for Robotics
-2. 3D Sensing and Point Cloud Processing
-3. Sensor Fusion Techniques
-4. Object Detection and Recognition
-
-### Week 4: Control Systems
-1. Feedback Control Theory
-2. PID Controllers and Tuning
-3. Trajectory Planning
-4. Real-time Control Implementation
-
-### Week 5: Locomotion Principles
-1. Static vs Dynamic Balance
-2. Walking Gaits and Patterns
-3. Stability Analysis
-4. Adaptive Locomotion
-
-### Week 6: Manipulation Fundamentals
-1. Kinematics (Forward and Inverse)
-2. Grasping and Dexterity
-3. Force Control
-4. Tool Use and Interaction
-
-### Week 7: Navigation and Path Planning
-1. SLAM (Simultaneous Localization and Mapping)
-2. Path Planning Algorithms
-3. Obstacle Avoidance
-4. Multi-robot Coordination
-
-### Week 8: AI and Machine Learning for Physical Systems
-1. Reinforcement Learning in Robotics
-2. Imitation Learning
-3. Sim-to-Real Transfer
-4. Adaptive Control Systems
-
-### Week 9: Human-Robot Interaction
-1. Social Robotics Principles
-2. Natural Language Processing
-3. Gesture Recognition
-4. Emotional Intelligence in Robots
-
-### Week 10: Advanced Locomotion
-1. Dynamic Movement Primitives
-2. Whole-Body Control
-3. Disturbance Recovery
-4. Multi-terrain Navigation
-
-### Week 11: System Integration
-1. Hardware-Software Integration
-2. Real-time Performance Optimization
-3. Safety System Integration
-4. Testing and Validation
-
-### Week 12: Capstone Project Development
-1. Capstone Project Implementation
-2. Iterative Design and Improvement
-3. Performance Evaluation
-4. Documentation and Presentation
-
-### Week 13: Capstone Project Demonstration
-1. Final System Integration
-2. Public Demonstration
-3. Project Evaluation and Feedback
-4. Future Directions and Research
-
-## Development Workflow
-- Use Docusaurus classic template for documentation: docs as root, nested hierarchical sidebar (Weeks as categories → 4 chapters each)
-- Rich MDX content: Code blocks, tables (hardware comparisons), Mermaid diagrams for ROS 2 architecture, URDF
-- Educational, step-by-step tone with warnings on costs/complexity
-- Automatic deployment to GitHub Pages via Actions
-
-## Hardware Requirements and Costs
-- Jetson Orin Nano Super: $249 (computing platform)
-- Unitree Go2: $1,600+ (quadruped robot platform)
-- Unitree G1: $13,500-$16,000 (humanoid robot platform)
-- Intel RealSense D435i: $200-$500 (depth sensing camera)
-- Additional sensors, actuators, and components as needed per project
-
-## Quality Standards
-- All code must include comprehensive documentation and examples
-- Hardware integration must include safety checks and error handling
-- Educational content must be accessible to diverse skill levels
-- Performance benchmarks must be established and maintained
-- Regular testing and validation of all systems
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
-This constitution supersedes all other practices for the Physical AI & Humanoid Robotics project. Amendments require documentation of changes, approval by the core development team, and a migration plan for existing components. All PRs and reviews must verify compliance with these principles. Complexity must be justified with clear educational or functional benefits. Use this constitution for guidance in all development decisions.
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-**Version**: 1.0.0 | **Ratified**: 2025-01-14 | **Last Amended**: 2025-01-14
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
