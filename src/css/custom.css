@@ -1,48 +1,145 @@
-/* Professional theme colors */
+/* Custom CSS for Physical AI & Humanoid Robotics Course */
+
+/* Primary color: Teal/Blue */
 :root {
-  --ifm-color-primary: #006699; /* Deep teal for robotics */
-  --ifm-color-primary-dark: #005588;
-  --ifm-color-primary-darker: #004477;
-  --ifm-color-primary-light: #0088cc;
-  --ifm-color-primary-lighter: #00aaff;
-  --ifm-color-primary-lightest: #66ccff;
+  --ifm-color-primary: #006699;
+  --ifm-color-primary-dark: #005985;
+  --ifm-color-primary-darker: #00537d;
+  --ifm-color-primary-darkest: #004466;
+  --ifm-color-primary-light: #0073a6;
+  --ifm-color-primary-lighter: #007aab;
+  --ifm-color-primary-lightest: #0087c2;
 }
 
-/* Hero section styling */
+/* Hero section background gradient */
 .hero {
-  background: linear-gradient(135deg, #006699 0%, #0088cc 100%);
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 0 0 20px 20px;
+  background: linear-gradient(135deg, #e6f2ff 0%, #cce6ff 100%);
+  padding: 4rem 0;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.button--primary {
-  background-color: white;
-  color: #006699;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  transition: all 0.3s;
-}
-
-.button--primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Card styling */
+/* Card hover effects */
 .card {
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 102, 153, 0.2);
+}
+
+/* Button styling */
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+/* Modern typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600;
+}
+
+/* Spacing improvements */
+.padding-top--md {
+  padding-top: 2rem !important;
+}
+
+.padding-bottom--md {
+  padding-bottom: 2rem !important;
+}
+
+.margin-bottom--lg {
+  margin-bottom: 3rem !important;
+}
+
+/* Navigation card styling */
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.course-cards > div {
+  background: #f8fbff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.course-cards > div:hover {
+  background: #e6f2ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 102, 153, 0.1);
+}
+
+.course-cards a {
+  display: block;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.course-cards a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .course-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom header styling */
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #006699;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  color: #0073a6;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation columns */
+.row .col {
+  margin-bottom: 1.5rem;
+}
+
+.row .col a {
+  display: block;
+  padding: 1rem;
+  background: #f0f8ff;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid #d1e0f0;
+}
+
+.row .col a:hover {
+  background: #e6f2ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 102, 153, 0.15);
 }

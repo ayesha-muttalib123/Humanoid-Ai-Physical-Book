@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Head -->
+  <circle cx="50" cy="30" r="12" fill="#006699" />
+  
+  <!-- Eyes -->
+  <circle cx="44" cy="27" r="1.5" fill="#ffffff" />
+  <circle cx="56" cy="27" r="1.5" fill="#ffffff" />
+  <circle cx="44" cy="27" r="0.7" fill="#000000" />
+  <circle cx="56" cy="27" r="0.7" fill="#000000" />
+  
+  <!-- Body -->
+  <rect x="40" y="42" width="20" height="25" rx="3" fill="#006699" />
+  
+  <!-- Neck -->
+  <rect x="46" y="38" width="8" height="4" fill="#006699" />
+  
+  <!-- Arms -->
+  <line x1="35" y1="45" x2="25" y2="55" stroke="#006699" stroke-width="3" stroke-linecap="round" />
+  <line x1="65" y1="45" x2="75" y2="55" stroke="006699" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Legs -->
+  <line x1="45" y1="67" x2="40" y2="80" stroke="#006699" stroke-width="3" stroke-linecap="round" />
+  <line x1="55" y1="67" x2="60" y2="80" stroke="#006699" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="3" fill="#00aaff" />
+  <circle cx="40" cy="45" r="1.5" fill="#00aaff" />
+  <circle cx="60" cy="45" r="1.5" fill="#00aaff" />
+  
+  <!-- Futuristic detail -->
+  <path d="M45 35 Q50 32 55 35" stroke="#00aaff" stroke-width="1.5" fill="none" />
+</svg>
